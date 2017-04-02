@@ -16,5 +16,5 @@ hacemos de la siguiente forma:
 ![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/permisos_carpeta.png)
 
 Ya dados los permisos al usuario sobre la carpeta que queremos clonar, procedemos al clonado de la carpeta 
-"var/www" que se encuentra en la máquina1 (ubuntuswap) a la máquina2 (ubuntuswap2).
+"/var/www/" que se encuentra en la máquina1 (ubuntuswap) a la máquina2 (ubuntuswap2).
 En la siguiente imagen veremos los archivos que tengo inicialmente en la máquina1.
