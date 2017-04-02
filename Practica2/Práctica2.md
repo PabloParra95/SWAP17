@@ -18,3 +18,55 @@ hacemos de la siguiente forma:
 Ya dados los permisos al usuario sobre la carpeta que queremos clonar, procedemos al clonado de la carpeta 
 "/var/www/" que se encuentra en la máquina1 (ubuntuswap) a la máquina2 (ubuntuswap2).
 En la siguiente imagen veremos los archivos que tengo inicialmente en la máquina1.
+
+![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/carpeta_a_clonar_m1.png)
+
+Utilizaremos el comando "ifconfig" para comprobar la ip de la máquina1:
+
+![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/ifconfig.png)
+
+Para clonarlos haremos uso del comando rsync tal y como nos ayuda el guión de la práctica. Lo vemos:
+
+![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/clonacion_carpeta.png)
+
+###3
+
+Ahora nos centraremos en configurar ssh de manera que podamos acceder desde la máquina1 a la máquina2 por ssh sin
+que nos pida la contraseña de la máquina a la que nos queremos conectar.
+Para poder acceder a la consola remota sin tener que introducir una contraseña, necesitamos una llave. Esta se
+puede hacer con ssh-keygen. En concreto, ssh puede crear llaves de tipo RSA y DSA. Utilizaremos una RSA puesto que 
+es más segura, con la opción -t se lo indicamos:
+
+![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/generar_claves.png)
+
+Ya hemos generado la clave, ahora nos disponemos a copiarla en la máquina en la que nos queremos conectar, lo
+haremos con el comando "ssh-copy-id"
+
+![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/copia_de_constrase%C3%B1as.png)
+
+A partir de ahora no nos pedirá ya la contraseña cuando nos conectemos por ssh, lo comprobamos:
+
+![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/conexion_ssh.png)
+
+###4 
+
+Para este ejercicio haremos uso del "cron" que es un administrador de procesos que actua en segundo plano y los 
+ejecuta en los intervalos que nosotros le indiquemos, para crear nuestra tarea, debemos editar el archivo
+"/etc/crontab" como superusuario. Para indicar el intervalo en el cual se ejecutará la tarea, tenemos varios 
+campos:
+
+* Minuto
+* Hora
+* DiadelMes
+* Mes
+* DiadelaSemana
+* Usuario
+* Comando
+
+Como en nuestro caso, yo quiero que se ejecute cada 1 Hora, rellenaremos ese campo, el de usuario y el comando (el
+que utilizamos para copiar las carpetas), podemos ver el archivo crontab modificado:
+
+![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/archivo_crontab.png)
+
+
+
