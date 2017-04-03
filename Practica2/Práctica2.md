@@ -19,15 +19,15 @@ Ya dados los permisos al usuario sobre la carpeta que queremos clonar, procedemo
 "/var/www/" que se encuentra en la máquina1 (ubuntuswap) a la máquina2 (ubuntuswap2).
 En la siguiente imagen veremos los archivos que tengo inicialmente en la máquina1.
 
-![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/carpeta_a_clonar_m1.png)
+![imagen](./carpeta_a_clonar_m1.png)
 
 Utilizaremos el comando "ifconfig" para comprobar la ip de la máquina1:
 
-![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/ifconfig.png)
+![imagen](./ifconfig.png)
 
 Para clonarlos haremos uso del comando rsync tal y como nos ayuda el guión de la práctica. Lo vemos:
 
-![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/clonacion_carpeta.png)
+![imagen](./clonacion_carpeta.png)
 
 ###3
 
@@ -37,16 +37,16 @@ Para poder acceder a la consola remota sin tener que introducir una contraseña,
 puede hacer con ssh-keygen. En concreto, ssh puede crear llaves de tipo RSA y DSA. Utilizaremos una RSA puesto que 
 es más segura, con la opción -t se lo indicamos:
 
-![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/generar_claves.png)
+![imagen](./generar_claves.png)
 
 Ya hemos generado la clave, ahora nos disponemos a copiarla en la máquina en la que nos queremos conectar, lo
 haremos con el comando "ssh-copy-id"
 
-![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/copia_de_constrase%C3%B1as.png)
+![imagen](./copia_de_constrase%C3%B1as.png)
 
 A partir de ahora no nos pedirá ya la contraseña cuando nos conectemos por ssh, lo comprobamos:
 
-![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/conexion_ssh.png)
+![imagen](./conexion_ssh.png)
 
 ###4 
 
@@ -66,7 +66,7 @@ campos:
 Como en nuestro caso, yo quiero que se ejecute cada 1 Hora, rellenaremos ese campo, el de usuario y el comando (el
 que utilizamos para copiar las carpetas), podemos ver el archivo crontab modificado:
 
-![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/archivo_crontab.png)
+![imagen](./archivo_crontab.png)
 
 
 
