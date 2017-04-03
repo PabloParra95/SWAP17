@@ -13,7 +13,7 @@ de archivos entre dos máquinas en una misma red. Yo he trabajado sobre el usuar
 (pabloparra en mis máquinas) por lo que tendre que darle permisos a la carpeta que vamos a clonar "/var/www/", lo
 hacemos de la siguiente forma:
 
-![imagen](https://github.com/PabloParra95/SWAP17/blob/master/Practica2/permisos_carpeta.png)
+![imagen](./permisos_carpeta.png)
 
 Ya dados los permisos al usuario sobre la carpeta que queremos clonar, procedemos al clonado de la carpeta 
 "/var/www/" que se encuentra en la máquina1 (ubuntuswap) a la máquina2 (ubuntuswap2).
