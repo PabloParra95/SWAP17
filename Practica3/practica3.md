@@ -16,6 +16,7 @@ Una vez instalado el balaceador, debemos configurarlo para que haga peticiones a
 /etc/nginx/conf.d/default.conf
 ```
 Mi configuración es la siguiente:
+
 ![imagen](conf_nginx.png)
 (Si nos damos cuenta las direcciones de las máquinas han cambiado con respecto a la práctica 2, esto se debe a que yo inicialmente tenía las máquinas en VirtualBox pero me ha dado problemas y he creado máquinas nuevas en VMWare).
 Con solo poner esta configuración en una primera instacia debería de balancear la peticiones pero nos damos cuenta de que si hacemos peticiones curl a la dirección del balanceador de carga nos devuelve un html de nginx de la máquina balanceadora, por lo que no esta preparado todavía, debemos borrar un archivo de configuración por defecto que aparece en la carpeta:
@@ -29,6 +30,7 @@ Una vez borrado inicializaremos el servicio con:
 systemctl start nginx
 ```
 y desde la máquina anfitriona haremos peticiones a la dirección: 192.168.131.131, lo vemos:
+
 ![imagen](prueba_nginx.png)
 
 De la misma forma que creamos la máquina balanceadora para nginx, creamos una ahora para configurarla con el balaceador haproxy. La nueva máquina tiene la siguiente configuración:
