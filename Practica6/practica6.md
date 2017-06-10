@@ -44,6 +44,7 @@ Ya podemos simular el fallo en uno de los discos, lo probamos:
 ![imagen](./faulty.png)
 
 También retirar el disco en caliente: 
+
 ![imagen](./remove.png)
 
 Y añadirlo de nuevo:
